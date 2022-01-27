@@ -1,0 +1,40 @@
+# automate the boring stuff with python lesson 9-10
+
+# Functions, the None value, and keyword arguments
+
+def hello(name): # Parameter: The variable inside the function (name)
+    print('Howdy,', name)
+
+hello('Alice') # Argument: the values passed in the function call (Alice)
+hello('Bob')
+
+def plusOne(number):
+    return number + 1 # this is the return value
+
+# the None value is the only value of the None data type, and it represents a lack of a value
+# If your function doesn't have a return value, the return value defaults to the None value
+
+
+# Keyword arguments
+# often used for optional arguments to pass to a function. eg print('the string', end='').
+# in this case, end is the keyword argument
+
+
+# Global vs Local scope
+# variables that exist outside all function are global. created when the program starts, and destroyed when the program terminates
+# variables inside a function are said to exist in that function's local scope. created when the function is called and destroyed when the function returns
+# each function has its own local scope
+# global variables can be read from the local scope
+    # if there's a local assignment statement, the scope will be local
+    # can be overridden w/ a global statement (global <var name>) at the beginning of the function
+    # if there is NOT an assignment statement w/in the function, the Global variable will be used
+
+def spam():
+    global eggs # global statement, making this function use the global variable eggs instead of creating it in local scope of spam()
+    eggs = 'Hello'
+    print(eggs)
+
+eggs = 42
+spam()
+print(eggs) # prints 'Hello' as assigned in the spam() function
+
