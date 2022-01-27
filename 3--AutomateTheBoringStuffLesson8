@@ -1,0 +1,21 @@
+# automate the boring stuff with python lesson 8
+
+# Built in functions include things like print, input, len, etc
+# The Standard Library contains a bunch of other stuff that's commonly used, like math, random
+# import with an import statement
+import random
+
+# and now
+def getRandom():
+    return random.randint(1,10) # gets a random int between 1 and 10 (inclusive)
+
+# alternatively: 
+# from random import *
+# this makes all the functions directly available, allowing randint(1,10) instead of random.randint(1,10)
+
+
+#import sys
+#sys.exit() # terminates the program.
+
+
+# third party modulse can also be installed w/ pip or similar
